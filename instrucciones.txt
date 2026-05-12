@@ -1,0 +1,53 @@
+========================================================================
+                     TELEBRIDGE - INSTRUCCIONES
+========================================================================
+
+¿QUÉ ES TELEBRIDGE?
+-------------------
+TeleBridge es una aplicación de escritorio diseñada para gestionar bots de 
+Telegram de forma sencilla y potente. Permite conectar tus bots con los 
+modelos de Inteligencia Artificial más avanzados (a través de OpenRouter) 
+sin necesidad de programar un servidor propio o registrar webhooks manualmente.
+
+Características principales:
+- Gestión multi-bot.
+- Integración automática con ngrok para túneles públicos HTTPS.
+- Carrusel de modelos gratuitos de OpenRouter (más de 25 modelos).
+- Fallback automático: si un modelo falla o está saturado, salta al siguiente.
+- Interfaz moderna y minimalista con modo oscuro.
+
+REQUISITOS PREVIOS
+------------------
+1. Node.js (v18 o superior).
+2. Una cuenta en OpenRouter (para obtener la API Key).
+3. Una cuenta en ngrok (para obtener el Authtoken gratuito).
+
+INSTALACIÓN Y USO
+-----------------
+1. Descarga o clona el repositorio.
+2. Abre una terminal en la carpeta del proyecto y ejecuta:
+   npm install
+3. Configura las variables de entorno:
+   Copia .env.example a .env
+4. Para compilar la aplicación por primera vez:
+   npm run build
+5. Para iniciar la aplicación:
+   npm run desktop
+
+CONFIGURACIÓN INICIAL
+---------------------
+1. Al abrir la app, ve al icono de ajustes (engranaje) arriba a la derecha.
+2. Introduce tu 'ngrok Authtoken' y dale a "Guardar y Activar Túnel".
+3. Crea un nuevo bot introduciendo el Token de Telegram (obtenido de BotFather)
+   y tu API Key de OpenRouter.
+4. ¡Listo! Tu bot ya puede responder mensajes.
+
+CRÉDITOS Y MÉRITOS
+------------------
+Este proyecto ha sido desarrollado con la colaboración y tecnología de:
+- TeleBridge Team (Idea Original y Desarrollo)
+- Z AI (Arquitectura y Sistemas)
+- Google Antigravity (Inteligencia Artificial y Pair Programming)
+- OpenRouter (Infraestructura de Modelos de IA)
+
+========================================================================

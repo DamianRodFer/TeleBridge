@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Bot {
+  id           String        @id @default(cuid())
+  name         String
+  token        String        @unique
+  username     String?
+  avatarUrl    String?
+  status       String        @default("disconnected") // connected, disconnected, error
+  instructions String?
+  openRouterKey String?
+  model        String?       @default("openai/gpt-3.5-turbo")
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  messageLogs  MessageLog[]
+}
+
+
+model MessageLog {
+  id         String   @id @default(cuid())
+  botId      String
+  direction  String   // incoming, outgoing
+  sender     String?
+  content    String
+  chatId     String?
+  apiStatus  String?  // success, error, pending
+  error      String?
+  createdAt  DateTime @default(now())
+  bot        Bot      @relation(fields: [botId], references: [id], onDelete: Cascade)
+}
