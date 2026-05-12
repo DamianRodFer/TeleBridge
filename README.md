@@ -1,4 +1,4 @@
-# 🤖 TeleBridge - Telegram Bot Manager
+# 🤖 TeleBridge - Telegram Bot Manager - Versión 1
 
 TeleBridge es una potente aplicación de escritorio (Electron + Next.js) que te permite gestionar múltiples bots de Telegram de forma centralizada. Conéctalos a cualquier modelo de Inteligencia Artificial a través de **OpenRouter** de manera automática y sin complicaciones.
 
